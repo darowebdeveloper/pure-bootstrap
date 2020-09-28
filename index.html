@@ -3,12 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap-Admin</title>
+    <title>Pure--Bootstrap Website</title>
+    <link rel="title icon" href="/images/title-img-3.png" type="image/png" />
     <link rel="stylesheet" href="/styles/all.min.css" />
     <link rel="stylesheet" href="/styles/bootstrap.min.css" />
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
+    <!-- Navbar -->
+    <!-- .navbar is display: flex; .navbar-expand-md makes nav responsive at md -->
+    <!-- .navbar-light makes the links light; .bg-dark make the nav dark -->
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
+      <!-- .navbar-brand used best with a to show a logo or brand -->
+      <a href="#" class="navbar-brand"><i class="fa fa-cubes fa-2x text-warning"></i></a>
+      <!-- .navbar-toggler to add button toggler; .navbar-toggler-icon to show the icon -->
+      <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- .collapse hide everything; .navbar-collapse reveals evething back and is connected to navbar-expand -->
+      <!-- .justify-content-between to add space to main-axis -->
+      <div class="collapse navbar-collapse justify-content-between" id="nav">
+        <!-- .navbar-nav make the ul in a row -->
+        <ul class="navbar-nav">
+          <!-- .nav-item for li makes nothing; .nav-link for a add paddingX; .text-light color white -->
+          <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3" href="#">Skills</a></li>
+          <!-- .dropdown prepares it for the dropdown -->
+          <li class="nav-item dropdown">
+            <!-- data-toggle="dropdown" is js to make it working -->
+            <!-- .dropdown-toggle is dropdown arrow character using css border properties -->
+            <a class="nav-link text-light font-weight-bold text-uppercase px-3 dropdown-toggle" data-toggle="dropdown" href="#">Projects</a>
+            <!-- .dropdown-menu hides the menu items  -->
+            <div class="dropdown-menu">
+              <!-- .dropdown-item to make it a dropdown item -->
+              <a class="dropdown-item" href="#">Project 1</a>
+              <a class="dropdown-item" href="#">Project 2</a>
+              <a class="dropdown-item" href="#">Project 3</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3" href="#">Teams</a></li>
+          <li class="nav-item"><a class="nav-link text-light font-weight-bold text-uppercase px-3" href="#">Contact</a></li>
+        </ul>
+        <!-- .form-inline display as flex -->
+        <form class="form-inline ml-3">
+          <!-- place the form inputs side by side -->
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" />
+            <div class="input-group-append">
+              <button type="button" class="btn btn-light"><i class="fa fa-search text-muted" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
     <script src="/scripts/jquery.min.js"></script>
     <script src="/scripts//popper.min.js"></script>
     <script src="/scripts/bootstrap.bundle.min.js"></script>
